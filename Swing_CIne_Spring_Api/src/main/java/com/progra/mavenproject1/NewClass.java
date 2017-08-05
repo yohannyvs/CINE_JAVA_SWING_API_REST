@@ -23,7 +23,7 @@ public class NewClass
         //inicio("rt","890");
     }
     
-    public static void hola() 
+    public static List<pelicula> hola() 
     {
         ResponseEntity<pelicula[]> response;
         response = restTemplate.getForEntity(api+"pelicula/", pelicula[].class);
@@ -47,19 +47,8 @@ public class NewClass
         
         System.out.println(list.get(0).getNombre());
         System.out.println(list.get(0).getIdioma());
-        /*for(pelicula p : response.getBody())
-        {
-            list.add( new pelicula(
-                    p.getId_presentacion(),
-                    p.getNombre(),
-                    p.getCategoria(),
-                    p.getIdioma(),
-                    p.getHora(),
-                    p.getNum_sala()
-            ));
-            
-            System.out.println(list);
-        }*/
+        
+        return list;
         
     }
     
