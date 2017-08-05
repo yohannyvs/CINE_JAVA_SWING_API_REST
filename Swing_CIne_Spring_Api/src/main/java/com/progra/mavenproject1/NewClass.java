@@ -9,7 +9,7 @@ import org.springframework.web.client.RestTemplate;
 
 public class NewClass 
 {
-    private static final String api = "http://localhost:53344/Cine_api_rest_spring/";
+    private static final String api = "http://localhost:8080/Cine_api_rest_spring/";
     public static RestTemplate restTemplate = new RestTemplate();
     
     public static void main(String args[])
