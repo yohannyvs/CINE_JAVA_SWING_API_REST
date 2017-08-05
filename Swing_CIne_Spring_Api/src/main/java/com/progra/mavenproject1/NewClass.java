@@ -15,7 +15,7 @@ public class NewClass
     public static void main(String args[])
     {
         //hola();
-        NewApplication f = new NewApplication();
+        NewJFrame f = new NewJFrame();
         //NewJFrame f = new NewJFrame();
         f.show();
         inicio("rt","890");
