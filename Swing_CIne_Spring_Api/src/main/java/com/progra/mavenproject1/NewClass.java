@@ -67,4 +67,18 @@ public class NewClass
          
        return p; 
     }
+    
+    public static void agregarPeli(String nom, String cate, String idi, String ima) 
+    {
+        peli p=new peli(nom, cate, idi, ima);
+      
+        ResponseEntity<peli> response =
+        restTemplate.postForEntity(api+"add_pelicula/", p, peli.class);
+ 
+        System.out.println();
+        System.out.println("POST executed");
+        System.out.println("POST StatusCode = " + response.getStatusCode());
+        System.out.println("POST Header location = " + response.getHeaders().getLocation());
+     
+    }
 }
