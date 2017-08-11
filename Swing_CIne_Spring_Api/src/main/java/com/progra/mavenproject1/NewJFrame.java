@@ -200,7 +200,7 @@ public class NewJFrame extends javax.swing.JFrame {
                 break;
                 
             case 2:
-                admin a= new admin();
+                InsertarPeli a= new InsertarPeli();
                 a.show();
                 break;
              
