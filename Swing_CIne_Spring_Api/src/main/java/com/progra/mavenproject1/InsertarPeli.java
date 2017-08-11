@@ -233,7 +233,7 @@ public class InsertarPeli extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-String re;
+String re=" ";
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         JFileChooser j = new JFileChooser();
         FileNameExtensionFilter fil = new FileNameExtensionFilter("JPG, PNG & GIF","jpg","png","gif");
@@ -254,11 +254,12 @@ String re;
         } catch (IOException ex) {
             Logger.getLogger(NewJFrame.class.getName()).log(Level.SEVERE, null, ex);
         }
-         System.out.println("IMAGEN EN 64: " +re);
+         
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        NewClass.agregarPeli(txtNom.getText(),txtCat.getText(),txtIdi.getText(),"fdf"); 
+        System.out.println("IMAGEN EN 64: " +re);
+        NewClass.agregarPeli(txtNom.getText(),txtCat.getText(),txtIdi.getText(),re.toString()); 
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**

@@ -11,12 +11,10 @@ package com.progra.mavenproject1;
  */
 public class peli {
 
-    public peli(String nom, String cate, String idi, String ima) {
-        this.nom = nom;
-        this.cate = cate;
-        this.idi = idi;
-        this.ima = ima;
+    public peli(){
+        
     }
+ 
 
     public String getNom() {
         return nom;
@@ -49,10 +47,28 @@ public class peli {
     public void setIma(String ima) {
         this.ima = ima;
     }
+
+    public peli(int id,String nom, String cate, String idi, String ima) {
+        this.id = id;
+        this.nom = nom;
+        this.cate = cate;
+        this.idi = idi;
+        this.ima = ima;
+        
+    }
     
     private String nom;
     private String cate;
     private String idi;
     private String ima;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+    private int id;
     
 }

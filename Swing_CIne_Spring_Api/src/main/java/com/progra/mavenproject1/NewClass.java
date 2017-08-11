@@ -16,17 +16,17 @@ public class NewClass
     
     public static void main(String args[])
     {
-        hola();
+        //obtenerPeliculas();
         NewJFrame f = new NewJFrame();
-        //NewJFrame f = new NewJFrame();
+    
         f.show();
         //inicio("rt","890");
     }
     
-    public static List<pelicula> hola() 
+    public static List<pelicula> obtenerPeliculas() 
     {
         ResponseEntity<pelicula[]> response;
-        response = restTemplate.getForEntity(api+"pelicula/", pelicula[].class);
+        response = restTemplate.getForEntity(api+"getpeliculas/", pelicula[].class);
         List<pelicula> list = new ArrayList<>();
 
         System.out.println();
@@ -68,17 +68,19 @@ public class NewClass
        return p; 
     }
     
-    public static void agregarPeli(String nom, String cate, String idi, String ima) 
+    public static String agregarPeli(String nom, String cate, String idi, String ima) 
     {
-        peli p=new peli(nom, cate, idi, ima);
-      
-        ResponseEntity<peli> response =
-        restTemplate.postForEntity(api+"add_pelicula/", p, peli.class);
- 
+        ResponseEntity<String> response;
+        response = restTemplate.getForEntity(api+"add_pelicula?nombre="+nom+"&categoria="+cate+"&idioma="+idi+"&img="+ima+"", String.class);
+
         System.out.println();
-        System.out.println("POST executed");
-        System.out.println("POST StatusCode = " + response.getStatusCode());
-        System.out.println("POST Header location = " + response.getHeaders().getLocation());
-     
+        System.out.println("GET All StatusCode = " + response.getStatusCode());
+        System.out.println("GET All Headers = " + response.getHeaders());
+        System.out.println("GET Body (object list): ");
+        String p=response.getBody();
+        System.out.println(p);
+        //Arrays.asList(response.getBody()).forEach(p -> System.out.println("--> " + p));
+         
+       return p; 
     }
 }
