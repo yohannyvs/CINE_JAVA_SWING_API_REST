@@ -16,18 +16,18 @@ public class NewClass
     
     public static void main(String args[])
     {
-        //obtenerPeliculas();
+        
         NewJFrame f = new NewJFrame();
     
         f.show();
         //inicio("rt","890");
     }
     
-    public static List<pelicula> obtenerPeliculas() 
+    public ArrayList<pelicula> obtenerPeliculas() 
     {
         ResponseEntity<pelicula[]> response;
-        response = restTemplate.getForEntity(api+"getpeliculas/", pelicula[].class);
-        List<pelicula> list = new ArrayList<>();
+        response = restTemplate.getForEntity(api+"pelicula/", pelicula[].class);
+        ArrayList<pelicula> list = new ArrayList<>();
 
         System.out.println();
         System.out.println("GET All StatusCode = " + response.getStatusCode());
@@ -42,7 +42,7 @@ public class NewClass
                     p.getCategoria(),
                     p.getIdioma(),
                     p.getHora(),
-                    p.getNum_sala()
+                    p.getNum_sala(),p.getIma()
             )));
         
         System.out.println(list.get(0).getNombre());
@@ -72,6 +72,54 @@ public class NewClass
     {
         ResponseEntity<String> response;
         response = restTemplate.getForEntity(api+"add_pelicula?nombre="+nom+"&categoria="+cate+"&idioma="+idi+"&img="+ima+"", String.class);
+
+        System.out.println();
+        System.out.println("GET All StatusCode = " + response.getStatusCode());
+        System.out.println("GET All Headers = " + response.getHeaders());
+        System.out.println("GET Body (object list): ");
+        String p=response.getBody();
+        System.out.println(p);
+        //Arrays.asList(response.getBody()).forEach(p -> System.out.println("--> " + p));
+         
+       return p; 
+    }
+    
+     public static String agregarPresentacion(int id, String hora, String sala) 
+    {
+        ResponseEntity<String> response;
+        response = restTemplate.getForEntity(api+"add_presentacion?pelicula="+id+"&hora="+hora+"&sala="+sala+"", String.class);
+
+        System.out.println();
+        System.out.println("GET All StatusCode = " + response.getStatusCode());
+        System.out.println("GET All Headers = " + response.getHeaders());
+        System.out.println("GET Body (object list): ");
+        String p=response.getBody();
+        System.out.println(p);
+        //Arrays.asList(response.getBody()).forEach(p -> System.out.println("--> " + p));
+         
+       return p; 
+    }
+     
+      public String compra(String admin, int id_presen, int acient,String cedula) 
+    {
+        ResponseEntity<String> response;
+        response = restTemplate.getForEntity(api+"compra?admin="+admin+"&id_present="+id_presen+"&aciento="+acient+"&cedula"+cedula+"", String.class);
+
+        System.out.println();
+        System.out.println("GET All StatusCode = " + response.getStatusCode());
+        System.out.println("GET All Headers = " + response.getHeaders());
+        System.out.println("GET Body (object list): ");
+        String p=response.getBody();
+        System.out.println(p);
+        //Arrays.asList(response.getBody()).forEach(p -> System.out.println("--> " + p));
+         
+       return p; 
+    }
+      
+      public String pago(int num_fact, int num_tar, String fecha,String num_seg) 
+    {
+        ResponseEntity<String> response;
+        response = restTemplate.getForEntity(api+"pago?num_fact="+num_fact+"&num_tar="+num_tar+"&fecha="+fecha+"&num_seg"+num_seg+"", String.class);
 
         System.out.println();
         System.out.println("GET All StatusCode = " + response.getStatusCode());

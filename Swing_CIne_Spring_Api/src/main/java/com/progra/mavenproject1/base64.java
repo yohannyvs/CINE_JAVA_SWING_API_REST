@@ -40,14 +40,14 @@ public class base64 {
             return encodedfile;
     }
     
-    public ImageIcon decodeFileToBase64Binary(String encode) throws IOException{
+    public BufferedImage decodeFileToBase64Binary(String encode) throws IOException{
 
             String base64Image = encode;
            byte[] imageBytes = javax.xml.bind.DatatypeConverter.parseBase64Binary(base64Image);
            BufferedImage img = ImageIO.read(new ByteArrayInputStream(imageBytes));
-                 ImageIcon icon= new ImageIcon(img);
+                 //ImageIcon icon= new ImageIcon(img);
 
-        return icon;
+        return img;
     }
     
 }

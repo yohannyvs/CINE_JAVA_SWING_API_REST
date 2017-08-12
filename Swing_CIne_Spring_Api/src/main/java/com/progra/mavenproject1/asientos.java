@@ -433,6 +433,8 @@ public class asientos extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         jButton1.setBackground(Color.blue);
         jButton1.setForeground(Color.WHITE);
+        NewClass r= new NewClass();
+        r.compra("cc", 3, 4, "rf");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

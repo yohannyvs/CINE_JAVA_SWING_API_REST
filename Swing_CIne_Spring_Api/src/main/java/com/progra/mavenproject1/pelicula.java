@@ -3,6 +3,16 @@ package com.progra.mavenproject1;
 
 public class pelicula 
 {
+
+    public pelicula(int id_presentacion, String nombre, String categoria, String idioma, String hora, String num_sala, String ima) {
+        this.id_presentacion = id_presentacion;
+        this.nombre = nombre;
+        this.categoria = categoria;
+        this.idioma = idioma;
+        this.hora = hora;
+        this.num_sala = num_sala;
+        this.ima = ima;
+    }
     private int id_presentacion;
     private String nombre;
     private String categoria;
@@ -10,17 +20,19 @@ public class pelicula
     private String hora;
     private String num_sala;
 
+    public String getIma() {
+        return ima;
+    }
+
+    public void setIma(String ima) {
+        this.ima = ima;
+    }
+    private String ima;
+
     public pelicula() {
     }
 
-    public pelicula(int id_presentacion, String nombre, String categoria, String idioma, String hora, String num_sala) {
-        this.id_presentacion = id_presentacion;
-        this.nombre = nombre;
-        this.categoria = categoria;
-        this.idioma = idioma;
-        this.hora = hora;
-        this.num_sala = num_sala;
-    }
+  
 
     public int getId_presentacion() {
         return id_presentacion;
