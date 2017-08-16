@@ -18,7 +18,7 @@ public class NewClass
     {
         
         NewJFrame f = new NewJFrame();
-    
+        
         f.show();
         //inicio("rt","890");
     }
@@ -42,11 +42,12 @@ public class NewClass
                     p.getCategoria(),
                     p.getIdioma(),
                     p.getHora(),
-                    p.getNum_sala(),p.getIma()
+                    p.getNum_sala(),
+                    p.getIma()
             )));
         
         System.out.println(list.get(0).getNombre());
-        System.out.println(list.get(0).getIdioma());
+        System.out.println(list.get(0).getIma());
         
         return list;
         

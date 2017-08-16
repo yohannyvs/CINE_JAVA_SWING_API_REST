@@ -10,7 +10,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
@@ -234,6 +234,13 @@ public class InsertarPeli extends javax.swing.JFrame {
             }
         });
         jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("Cerrar sesión");
+        jMenu2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu2MouseClicked(evt);
+            }
+        });
         jMenuBar1.add(jMenu2);
 
         setJMenuBar(jMenuBar1);
@@ -278,7 +285,13 @@ String re=" ";
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         System.out.println("IMAGEN EN 64: " +re);
-        NewClass.agregarPeli(txtNom.getText(),txtCat.getText(),txtIdi.getText(),re.toString()); 
+        NewClass.agregarPeli(txtNom.getText(),txtCat.getText(),txtIdi.getText(),re); 
+        JOptionPane.showMessageDialog(rootPane, "Insertado correctamente");
+        
+            txtCat.setText("");
+            txtIdi.setText("");
+            txtNom.setText("");
+            TxtIma.setText("");
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
@@ -290,6 +303,11 @@ String re=" ";
          InsertarPresentacion i=new InsertarPresentacion();
         i.show();
     }//GEN-LAST:event_jMenu1MouseClicked
+
+    private void jMenu2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu2MouseClicked
+        NewJFrame d= new NewJFrame();
+        d.show();
+    }//GEN-LAST:event_jMenu2MouseClicked
 
     /**
      * @param args the command line arguments

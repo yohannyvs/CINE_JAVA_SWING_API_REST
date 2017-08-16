@@ -5,6 +5,8 @@
  */
 package com.progra.mavenproject1;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author ADRIA
@@ -169,6 +171,13 @@ public class InsertarPresentacion extends javax.swing.JFrame {
             }
         });
         jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("Cerrar sesión");
+        jMenu2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu2MouseClicked(evt);
+            }
+        });
         jMenuBar1.add(jMenu2);
 
         setJMenuBar(jMenuBar1);
@@ -190,6 +199,12 @@ public class InsertarPresentacion extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         
         NewClass.agregarPresentacion(Integer.parseInt(txtpeli.getText()),txthora.getText(),txtsala.getText());
+         JOptionPane.showMessageDialog(rootPane, "Insertado correctamente");
+        
+            txtpeli.setText("");
+            txthora.setText("");
+            txtsala.setText("");
+           
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
@@ -201,6 +216,11 @@ public class InsertarPresentacion extends javax.swing.JFrame {
          InsertarPeli p=new InsertarPeli();
         p.show();
     }//GEN-LAST:event_jMenu1MouseClicked
+
+    private void jMenu2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu2MouseClicked
+         NewJFrame d= new NewJFrame();
+        d.show();
+    }//GEN-LAST:event_jMenu2MouseClicked
 
     /**
      * @param args the command line arguments
