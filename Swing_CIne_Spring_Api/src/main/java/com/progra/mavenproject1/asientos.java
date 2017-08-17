@@ -21,10 +21,13 @@ public class asientos extends javax.swing.JFrame {
     public asientos() {
         
         initComponents();
-        
+        cine c = new cine();
+       String e=c.getIdpresentacion();
         ArrayList<String> lista = new ArrayList<>();
-        lista=a.obtenerAsientos("1");
-        for(int x=0;x<lista.size();x++) {
+        lista=a.obtenerAsientos(c.getIdpresentacion());
+        if (lista.get(0)!="no") {
+            
+             for(int x=0;x<lista.size();x++) {
             switch(lista.get(x)){
                 case "1":
                     jButton1.setBackground(Color.red);
@@ -128,6 +131,10 @@ public class asientos extends javax.swing.JFrame {
                     break;      
                     
             }
+            
+        }
+        
+       
         
         }
         

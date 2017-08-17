@@ -5,10 +5,7 @@
  */
 package com.progra.mavenproject1;
 
-import java.util.ArrayList;
-import java.util.List;
-import javax.swing.table.TableModel;
-import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author ADRIA
@@ -20,6 +17,18 @@ public class cine extends javax.swing.JFrame {
      */
     tabla t = new tabla();
     pelicula p = new pelicula();
+
+    public String getIdpresentacion() {
+        return idpresentacion;
+    }
+
+    public static void setIdpresentacion(String idpresentacion) {
+        cine.idpresentacion = idpresentacion;
+    }
+
+   
+    public static String idpresentacion;
+   
     public cine() {
         
         initComponents();
@@ -41,6 +50,7 @@ public class cine extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         tabla = new javax.swing.JTable();
+        txt = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -91,7 +101,14 @@ public class cine extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        tabla.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tablaMouseClicked(evt);
+            }
+        });
         jScrollPane2.setViewportView(tabla);
+
+        txt.setFont(new java.awt.Font("Ebrima", 0, 18)); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -104,7 +121,9 @@ public class cine extends javax.swing.JFrame {
                 .addGap(650, 650, 650))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(132, 132, 132)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 906, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txt, javax.swing.GroupLayout.PREFERRED_SIZE, 612, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 906, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -113,7 +132,9 @@ public class cine extends javax.swing.JFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 353, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
+                .addGap(28, 28, 28)
+                .addComponent(txt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addGap(136, 136, 136))
         );
@@ -139,6 +160,19 @@ public class cine extends javax.swing.JFrame {
         a.show();
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void tablaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablaMouseClicked
+        obtenerFila();
+    }//GEN-LAST:event_tablaMouseClicked
+
+    
+    public void obtenerFila(){
+        int row = tabla.getSelectedRow();
+     
+        setIdpresentacion(tabla.getValueAt(row, 0).toString());
+        txt.setText("Pelicula: "+tabla.getValueAt(row, 1));
+    }
+    
+   
     /**
      * @param args the command line arguments
      */
@@ -181,5 +215,6 @@ public class cine extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable tabla;
+    private javax.swing.JTextField txt;
     // End of variables declaration//GEN-END:variables
 }

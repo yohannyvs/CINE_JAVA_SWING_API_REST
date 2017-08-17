@@ -35,8 +35,6 @@ public class NewClass
         System.out.println("GET All Headers = " + response.getHeaders());
         System.out.println("GET Body (object list): ");
         
-        //Arrays.asList(response.getBody()).forEach(p -> System.out.println("--> " + p.getNombre()));
-        
         Arrays.asList(response.getBody()).forEach(p -> list.add( new pelicula(
                     p.getId_presentacion(),
                     p.getNombre(),
@@ -84,10 +82,7 @@ public class NewClass
         
         //Arrays.asList(response.getBody()).forEach(p -> System.out.println("--> " + p.getNombre()));
 
-        Arrays.asList(response.getBody())
-            .forEach(n -> list.add(n));
-        
-
+        Arrays.asList(response.getBody()).forEach(n -> list.add(n));
         
         return list;
     }
@@ -102,8 +97,6 @@ public class NewClass
         System.out.println("GET Body (object list): ");
         String p=response.getBody();
         System.out.println(p);
-        //Arrays.asList(response.getBody()).forEach(p -> System.out.println("--> " + p));
-         
        return p; 
     }
     
@@ -118,7 +111,7 @@ public class NewClass
         System.out.println("GET Body (object list): ");
         String p=response.getBody();
         System.out.println(p);
-        //Arrays.asList(response.getBody()).forEach(p -> System.out.println("--> " + p));
+   
          
        return p; 
     }
