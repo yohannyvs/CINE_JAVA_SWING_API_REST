@@ -53,7 +53,7 @@ public class tabla{
 
         if(list.size() > 0){
             for(int i=0; i<list.size(); i++){
-                Object fila[] = new Object[6];
+                Object fila[] = new Object[7];
                 vo = list.get(i);
                 fila[0] = vo.getId_presentacion();
                 fila[1] = vo.getNombre();

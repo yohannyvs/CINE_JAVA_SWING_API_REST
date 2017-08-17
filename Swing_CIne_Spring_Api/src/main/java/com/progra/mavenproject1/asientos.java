@@ -6,6 +6,7 @@
 package com.progra.mavenproject1;
 
 import java.awt.Color;
+import java.util.ArrayList;
 
 /**
  *
@@ -16,8 +17,121 @@ public class asientos extends javax.swing.JFrame {
     /**
      * Creates new form asientos
      */
+    NewClass a = new NewClass();
     public asientos() {
+        
         initComponents();
+        
+        ArrayList<String> lista = new ArrayList<>();
+        lista=a.obtenerAsientos("1");
+        for(int x=0;x<lista.size();x++) {
+            switch(lista.get(x)){
+                case "1":
+                    jButton1.setBackground(Color.red);
+                    jButton1.setForeground(Color.WHITE);
+                    jButton1.setEnabled(false);
+                    break;
+                case "2":
+                    jButton2.setBackground(Color.red);
+                    jButton2.setForeground(Color.WHITE);
+                    jButton2.setEnabled(false);
+                    break;
+                case "3":
+                    jButton3.setBackground(Color.red);
+                    jButton3.setForeground(Color.WHITE);
+                    jButton3.setEnabled(false);
+                    break;
+                case "4":
+                    jButton4.setBackground(Color.red);
+                    jButton4.setForeground(Color.WHITE);
+                    jButton4.setEnabled(false);
+                    break;
+                case "5":
+                    jButton5.setBackground(Color.red);
+                    jButton5.setForeground(Color.WHITE);
+                    jButton5.setEnabled(false);
+                    break;
+                case "6":
+                    jButton6.setBackground(Color.red);
+                    jButton6.setForeground(Color.WHITE);
+                    jButton6.setEnabled(false);
+                    break;
+                case "7":
+                    jButton7.setBackground(Color.red);
+                    jButton7.setForeground(Color.WHITE);
+                    jButton7.setEnabled(false);
+                    break;
+                case "8":
+                    jButton8.setBackground(Color.red);
+                    jButton8.setForeground(Color.WHITE);
+                    jButton8.setEnabled(false);
+                    break;
+                case "9":
+                    jButton9.setBackground(Color.red);
+                    jButton9.setForeground(Color.WHITE);
+                    jButton9.setEnabled(false);
+                    break;
+                case "10":
+                    jButton10.setBackground(Color.red);
+                    jButton10.setForeground(Color.WHITE);
+                    jButton10.setEnabled(false);
+                    break;
+                case "11":
+                    jButton11.setBackground(Color.red);
+                    jButton11.setForeground(Color.WHITE);
+                    jButton11.setEnabled(false);
+                    break;
+                case "12":
+                    jButton12.setBackground(Color.red);
+                    jButton12.setForeground(Color.WHITE);
+                    jButton12.setEnabled(false);
+                    break;
+                case "13":
+                    jButton13.setBackground(Color.red);
+                    jButton13.setForeground(Color.WHITE);
+                    jButton13.setEnabled(false);
+                    break; 
+               case "14":
+                    jButton14.setBackground(Color.red);
+                    jButton14.setForeground(Color.WHITE);
+                    jButton14.setEnabled(false);
+                    break;
+                case "15":
+                    jButton15.setBackground(Color.red);
+                    jButton15.setForeground(Color.WHITE);
+                    jButton15.setEnabled(false);
+                    break;
+                case "16":
+                    jButton16.setBackground(Color.red);
+                    jButton16.setForeground(Color.WHITE);
+                    jButton16.setEnabled(false);
+                    break;
+                case "17":
+                    jButton17.setBackground(Color.red);
+                    jButton17.setForeground(Color.WHITE);
+                    jButton17.setEnabled(false);
+                    break;
+                case "18":
+                    jButton18.setBackground(Color.red);
+                    jButton18.setForeground(Color.WHITE);
+                    jButton18.setEnabled(false);
+                    break;
+                case "19":
+                    jButton19.setBackground(Color.red);
+                    jButton19.setForeground(Color.WHITE);
+                    jButton19.setEnabled(false);
+                    break;
+                case "20":
+                    jButton20.setBackground(Color.red);
+                    jButton20.setForeground(Color.WHITE);
+                    jButton20.setEnabled(false);
+                    break;      
+                    
+            }
+        
+        }
+        
+        
     }
 
     /**
@@ -377,6 +491,7 @@ public class asientos extends javax.swing.JFrame {
 
         jButton21.setBackground(new java.awt.Color(204, 0, 0));
         jButton21.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
+        jButton21.setForeground(new java.awt.Color(255, 255, 255));
         jButton21.setText("Continuar");
         jButton21.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

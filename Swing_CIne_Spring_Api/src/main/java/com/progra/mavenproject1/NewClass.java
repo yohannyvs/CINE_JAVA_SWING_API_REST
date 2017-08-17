@@ -20,6 +20,7 @@ public class NewClass
         NewJFrame f = new NewJFrame();
         
         f.show();
+       
         //inicio("rt","890");
     }
     
@@ -69,6 +70,27 @@ public class NewClass
        return p; 
     }
     
+    
+    public ArrayList<String> obtenerAsientos(String idpresentacion) 
+    {
+        ResponseEntity<String[]> response;
+        response = restTemplate.getForEntity(api+"acientos?presentacion="+idpresentacion+"", String[].class);
+        ArrayList<String> list = new ArrayList<>();
+
+        System.out.println();
+        System.out.println("GET All StatusCode = " + response.getStatusCode());
+        System.out.println("GET All Headers = " + response.getHeaders());
+        System.out.println("GET Body (object list): ");
+        
+        //Arrays.asList(response.getBody()).forEach(p -> System.out.println("--> " + p.getNombre()));
+
+        Arrays.asList(response.getBody())
+            .forEach(n -> list.add(n));
+        
+
+        
+        return list;
+    }
     public static String agregarPeli(String nom, String cate, String idi, String ima) 
     {
         ResponseEntity<String> response;
