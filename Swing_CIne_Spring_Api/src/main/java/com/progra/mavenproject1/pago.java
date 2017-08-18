@@ -206,7 +206,7 @@ public class pago extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         NewClass e =new NewClass();
-        e.pago(3, Integer.parseInt(txtTar.getText()),jComboBox1.getName(),txtCod.getText());
+        e.pago(2, Integer.parseInt(txtTar.getText()),jComboBox1.getName(),txtCod.getText());
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

@@ -52,6 +52,78 @@ public class NewClass
         
     }
     
+    
+     public ArrayList<pelicula> FiltroCategoria(String cat) 
+    {
+        ResponseEntity<pelicula[]> response;
+        response = restTemplate.getForEntity(api+"/pelicula_categoria?categoria="+cat+"", pelicula[].class);
+        ArrayList<pelicula> list = new ArrayList<>();
+
+        System.out.println();
+        System.out.println("GET All StatusCode = " + response.getStatusCode());
+        System.out.println("GET All Headers = " + response.getHeaders());
+        System.out.println("GET Body (object list): ");
+        
+        Arrays.asList(response.getBody()).forEach(p -> list.add( new pelicula(
+                    p.getId_presentacion(),
+                    p.getNombre(),
+                    p.getCategoria(),
+                    p.getIdioma(),
+                    p.getHora(),
+                    p.getNum_sala(),
+                    p.getIma()
+            )));
+        
+        return list;
+    }
+     
+    public ArrayList<pelicula> FiltroIdioma(String idi) 
+    {
+        ResponseEntity<pelicula[]> response;
+        response = restTemplate.getForEntity(api+"/pelicula_idioma?idioma="+idi+"", pelicula[].class);
+        ArrayList<pelicula> list = new ArrayList<>();
+
+        System.out.println();
+        System.out.println("GET All StatusCode = " + response.getStatusCode());
+        System.out.println("GET All Headers = " + response.getHeaders());
+        System.out.println("GET Body (object list): ");
+        
+        Arrays.asList(response.getBody()).forEach(p -> list.add( new pelicula(
+                    p.getId_presentacion(),
+                    p.getNombre(),
+                    p.getCategoria(),
+                    p.getIdioma(),
+                    p.getHora(),
+                    p.getNum_sala(),
+                    p.getIma()
+            )));
+        
+       return list;
+    }
+    
+    public ArrayList<pelicula> FiltroNombre(String nom) 
+    {
+        ResponseEntity<pelicula[]> response;
+        response = restTemplate.getForEntity(api+"/pelicula_nombre?nombre="+nom+"", pelicula[].class);
+        ArrayList<pelicula> list = new ArrayList<>();
+
+        System.out.println();
+        System.out.println("GET All StatusCode = " + response.getStatusCode());
+        System.out.println("GET All Headers = " + response.getHeaders());
+        System.out.println("GET Body (object list): ");
+        
+        Arrays.asList(response.getBody()).forEach(p -> list.add( new pelicula(
+                    p.getId_presentacion(),
+                    p.getNombre(),
+                    p.getCategoria(),
+                    p.getIdioma(),
+                    p.getHora(),
+                    p.getNum_sala(),
+                    p.getIma()
+            )));
+        
+       return list;
+    }
     public static String inicio( String id, String pass) 
     {
         ResponseEntity<String> response;

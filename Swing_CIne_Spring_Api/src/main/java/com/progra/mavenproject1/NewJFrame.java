@@ -18,10 +18,17 @@ public class NewJFrame extends javax.swing.JFrame {
      */
     public NewJFrame() {
         initComponents();
-        
-        
+    }
+    
+    public static String ced;
+
+    public String getCed() {
+        return ced;
     }
 
+    public static void setCed(String ced) {
+        NewJFrame.ced = ced;
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -192,7 +199,8 @@ public class NewJFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        String r=NewClass.inicio(jID.getText(), jPass.getText()); 
+        String r=NewClass.inicio(jID.getText(), jPass.getText());
+        setCed(jID.getText());
         int d=Integer.parseInt(r);
         switch (d) {
             case 1:  

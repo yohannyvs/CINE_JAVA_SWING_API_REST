@@ -30,7 +30,7 @@ public class tabla{
    NewClass dao = null;
 
 
-    public void visualizar(JTable tabla){
+    public void visualizar(JTable tabla,String filtro,String var){
         
         tabla.setDefaultRenderer(Object.class, new Render());
         DefaultTableModel dt = new DefaultTableModel(){
@@ -49,7 +49,23 @@ public class tabla{
 
         dao = new NewClass();
         pelicula vo = new pelicula();
-        ArrayList<pelicula> list = dao.obtenerPeliculas();
+        ArrayList<pelicula> list = null;
+        if (filtro=="Ninguno") {
+            list = dao.obtenerPeliculas();
+        }
+        
+        if (filtro=="Nombre") {
+            list = dao.FiltroNombre(var);
+        }
+        
+        if (filtro=="Categoria") {
+            list = dao.FiltroCategoria(var);
+        }
+        
+        if (filtro=="Idioma") {
+            list = dao.FiltroIdioma(var);
+        }
+                
 
         if(list.size() > 0){
             for(int i=0; i<list.size(); i++){
