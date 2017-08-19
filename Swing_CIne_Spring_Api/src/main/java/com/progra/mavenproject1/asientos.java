@@ -612,17 +612,20 @@ public class asientos extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         jButton2.setBackground(Color.blue);
         jButton2.setForeground(Color.WHITE);
+         setFactura(r.compra(admi,id,2,cliente));
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         jButton3.setBackground(Color.blue);
         jButton3.setForeground(Color.WHITE);
+         setFactura(r.compra(admi,id,3,cliente));
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
         jButton4.setBackground(Color.blue);
         jButton4.setForeground(Color.WHITE);
+         setFactura(r.compra(admi,id,4,cliente));
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
@@ -636,90 +639,105 @@ public class asientos extends javax.swing.JFrame {
         // TODO add your handling code here:
         jButton6.setBackground(Color.blue);
         jButton6.setForeground(Color.WHITE);
+         setFactura(r.compra(admi,id,6,cliente));
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
         jButton7.setBackground(Color.blue);
         jButton7.setForeground(Color.WHITE);
+         setFactura(r.compra(admi,id,7,cliente));
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
         jButton8.setBackground(Color.blue);
         jButton8.setForeground(Color.WHITE);
+         setFactura(r.compra(admi,id,8,cliente));
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         // TODO add your handling code here:
         jButton9.setBackground(Color.blue);
         jButton9.setForeground(Color.WHITE);
+         setFactura(r.compra(admi,id,9,cliente));
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         // TODO add your handling code here:
         jButton10.setBackground(Color.blue);
         jButton10.setForeground(Color.WHITE);
+         setFactura(r.compra(admi,id,10,cliente));
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
         // TODO add your handling code here:
         jButton11.setBackground(Color.blue);
         jButton11.setForeground(Color.WHITE);
+         setFactura(r.compra(admi,id,11,cliente));
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
         // TODO add your handling code here:
         jButton12.setBackground(Color.blue);
         jButton12.setForeground(Color.WHITE);
+         setFactura(r.compra(admi,id,12,cliente));
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
         // TODO add your handling code here:
         jButton13.setBackground(Color.blue);
         jButton13.setForeground(Color.WHITE);
+         setFactura(r.compra(admi,id,13,cliente));
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
         // TODO add your handling code here:
         jButton14.setBackground(Color.blue);
         jButton14.setForeground(Color.WHITE);
+         setFactura(r.compra(admi,id,14,cliente));
     }//GEN-LAST:event_jButton14ActionPerformed
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
         // TODO add your handling code here:
         jButton15.setBackground(Color.blue);
         jButton15.setForeground(Color.WHITE);
+         setFactura(r.compra(admi,id,15,cliente));
     }//GEN-LAST:event_jButton15ActionPerformed
 
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
         // TODO add your handling code here:
         jButton16.setBackground(Color.blue);
         jButton16.setForeground(Color.WHITE);
+         setFactura(r.compra(admi,id,16,cliente));
     }//GEN-LAST:event_jButton16ActionPerformed
 
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
         // TODO add your handling code here:
         jButton17.setBackground(Color.blue);
         jButton17.setForeground(Color.WHITE);
+         setFactura(r.compra(admi,id,17,cliente));
     }//GEN-LAST:event_jButton17ActionPerformed
 
     private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
         // TODO add your handling code here:
         jButton18.setBackground(Color.blue);
         jButton18.setForeground(Color.WHITE);
+         setFactura(r.compra(admi,id,18,cliente));
     }//GEN-LAST:event_jButton18ActionPerformed
 
     private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
         // TODO add your handling code here:
         jButton19.setBackground(Color.blue);
         jButton19.setForeground(Color.WHITE);
+         setFactura(r.compra(admi,id,19,cliente));
     }//GEN-LAST:event_jButton19ActionPerformed
 
     private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
         // TODO add your handling code here:
         jButton20.setBackground(Color.blue);
         jButton20.setForeground(Color.WHITE);
+         setFactura(r.compra(admi,id,20,cliente));
     }//GEN-LAST:event_jButton20ActionPerformed
 
     private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
