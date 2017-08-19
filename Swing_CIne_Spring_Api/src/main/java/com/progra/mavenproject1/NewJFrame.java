@@ -204,17 +204,18 @@ public class NewJFrame extends javax.swing.JFrame {
         int d=Integer.parseInt(r);
         switch (d) {
             case 1:  
-                   
-                cine c = new cine();
-                c.show();
+                   JOptionPane.showMessageDialog(null, "Esta cuenta no tiene acceso al sistema");
                 break;
                 
             case 2:
+                cine c = new cine();
+                c.show();
+                break;
+            case 3:
                 InsertarPeli a= new InsertarPeli();
                 a.show();
                 break;
-             
-            case 3:
+            case 4:
                 JOptionPane.showMessageDialog(null, "Datos incorrectos, vuelva a intentarlo");
             default:
                 throw new AssertionError();

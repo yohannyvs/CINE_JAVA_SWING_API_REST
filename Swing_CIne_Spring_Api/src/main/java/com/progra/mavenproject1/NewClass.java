@@ -191,7 +191,7 @@ public class NewClass
       public String compra(String admin, int id_presen, int acient,String cedula) 
     {
         ResponseEntity<String> response;
-        response = restTemplate.getForEntity(api+"compra?admin="+admin+"&id_present="+id_presen+"&aciento="+acient+"&cedula"+cedula+"", String.class);
+        response = restTemplate.getForEntity(api+"compra?admin="+admin+"&id_present="+id_presen+"&aciento="+acient+"&cedula="+cedula+"", String.class);
 
         System.out.println();
         System.out.println("GET All StatusCode = " + response.getStatusCode());

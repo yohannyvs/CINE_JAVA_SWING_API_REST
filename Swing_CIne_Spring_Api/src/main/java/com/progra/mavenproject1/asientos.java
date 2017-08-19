@@ -20,6 +20,15 @@ public class asientos extends javax.swing.JFrame {
     NewClass a = new NewClass();
     cine c = new cine();
     NewJFrame d= new NewJFrame();
+
+    public String getFactura() {
+        return factura;
+    }
+
+    public static void setFactura(String factura) {
+        asientos.factura = factura;
+    }
+    public static String factura;
     public asientos() {
         
         initComponents();
@@ -592,9 +601,10 @@ public class asientos extends javax.swing.JFrame {
         jButton1.setBackground(Color.blue);
         jButton1.setForeground(Color.WHITE);
         NewClass r= new NewClass();
-        
-        
-        r.compra("1234",3, 1, "123");
+        String admi=d.getCed();
+        int id=Integer.parseInt(c.getIdpresentacion());
+        String cliente=c.getCedula();
+        setFactura(r.compra(admi,id, 18,cliente));
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
