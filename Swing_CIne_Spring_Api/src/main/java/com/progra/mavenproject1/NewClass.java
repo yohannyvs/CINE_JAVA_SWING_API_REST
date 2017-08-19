@@ -207,7 +207,7 @@ public class NewClass
       public String pago(int num_fact, int num_tar, String fecha,String num_seg) 
     {
         ResponseEntity<String> response;
-        response = restTemplate.getForEntity(api+"pago?num_fact="+num_fact+"&num_tar="+num_tar+"&fecha="+fecha+"&num_seg"+num_seg+"", String.class);
+        response = restTemplate.getForEntity(api+"pago?num_fact="+num_fact+"&num_tar="+num_tar+"&fecha="+fecha+"&num_seg="+num_seg+"", String.class);
 
         System.out.println();
         System.out.println("GET All StatusCode = " + response.getStatusCode());

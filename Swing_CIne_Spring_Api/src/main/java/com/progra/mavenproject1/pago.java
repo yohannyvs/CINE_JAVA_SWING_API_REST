@@ -35,8 +35,8 @@ public class pago extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         txtTar = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        CmbMes = new javax.swing.JComboBox<>();
+        CmbAnno = new javax.swing.JComboBox<>();
         jLabel4 = new javax.swing.JLabel();
         txtCod = new javax.swing.JPasswordField();
         jButton1 = new javax.swing.JButton();
@@ -88,13 +88,13 @@ public class pago extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(204, 0, 0));
         jLabel3.setText("Número de tarjeta:");
 
-        jComboBox1.setBackground(new java.awt.Color(255, 255, 255));
-        jComboBox1.setForeground(new java.awt.Color(0, 0, 0));
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12" }));
+        CmbMes.setBackground(new java.awt.Color(255, 255, 255));
+        CmbMes.setForeground(new java.awt.Color(0, 0, 0));
+        CmbMes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12" }));
 
-        jComboBox2.setBackground(new java.awt.Color(255, 255, 255));
-        jComboBox2.setForeground(new java.awt.Color(0, 0, 0));
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27" }));
+        CmbAnno.setBackground(new java.awt.Color(255, 255, 255));
+        CmbAnno.setForeground(new java.awt.Color(0, 0, 0));
+        CmbAnno.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27" }));
 
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(204, 0, 0));
@@ -127,7 +127,7 @@ public class pago extends javax.swing.JFrame {
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jButton1)
                             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(CmbMes, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(txtTar, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(txtCod, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(51, 51, 51))))
@@ -137,7 +137,7 @@ public class pago extends javax.swing.JFrame {
                     .addComponent(jLabel2)
                     .addComponent(jLabel4))
                 .addGap(109, 109, 109)
-                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(CmbAnno, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel3Layout.createSequentialGroup()
@@ -155,8 +155,8 @@ public class pago extends javax.swing.JFrame {
                 .addGap(52, 52, 52)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jComboBox1)
-                    .addComponent(jComboBox2))
+                    .addComponent(CmbMes)
+                    .addComponent(CmbAnno))
                 .addGap(64, 64, 64)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -206,7 +206,10 @@ public class pago extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         NewClass e =new NewClass();
-        e.pago(2, Integer.parseInt(txtTar.getText()),jComboBox1.getName(),txtCod.getText());
+        asientos a =new asientos();
+        int fac=Integer.parseInt(a.getFactura());
+        String fecha=CmbMes.getSelectedItem().toString()+"/"+CmbAnno.getSelectedItem().toString();
+        e.pago(fac, Integer.parseInt(txtTar.getText()),fecha,txtCod.getText());
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -245,9 +248,9 @@ public class pago extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> CmbAnno;
+    private javax.swing.JComboBox<String> CmbMes;
     private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

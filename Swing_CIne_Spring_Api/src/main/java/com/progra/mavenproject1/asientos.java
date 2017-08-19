@@ -596,15 +596,17 @@ public class asientos extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+  NewClass r= new NewClass();
+  String admi=d.getCed();
+   int id=Integer.parseInt(c.getIdpresentacion());
+        String cliente=c.getCedula();
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         jButton1.setBackground(Color.blue);
         jButton1.setForeground(Color.WHITE);
-        NewClass r= new NewClass();
-        String admi=d.getCed();
-        int id=Integer.parseInt(c.getIdpresentacion());
-        String cliente=c.getCedula();
-        setFactura(r.compra(admi,id, 18,cliente));
+      
+        
+       
+        setFactura(r.compra(admi,id,1,cliente));
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -627,6 +629,7 @@ public class asientos extends javax.swing.JFrame {
         // TODO add your handling code here:
         jButton5.setBackground(Color.blue);
         jButton5.setForeground(Color.WHITE);
+        setFactura(r.compra(admi,id,5,cliente));
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
